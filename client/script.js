@@ -1,15 +1,7 @@
 const socket = io();
 let peerConnection;
 const config = {
-  iceServers: [
-    { urls: 'stun:stun.l.google.com:19302' },
-    {
-      urls: 'turn:your_xirsys_url_here',
-      username: 'your_xirsys_username',
-      credential: 'your_xirsys_credential'
-    }
-  ]
-};
+ iceServers: [{   urls: [ "stun:bn-turn1.xirsys.com" ]}, {   username: "yVKe1J8bwlH5D_DmvFzFqvQrQX-JRYUvtUYNdcLEZSU7Fcmup6ctxLvgy9uctsHiAAAAAGgknM1BZHJpZnQwMQ==",   credential: "b3ad7dcc-30c8-11f0-942d-0242ac140004",   urls: [       "turn:bn-turn1.xirsys.com:80?transport=udp",       "turn:bn-turn1.xirsys.com:3478?transport=udp",       "turn:bn-turn1.xirsys.com:80?transport=tcp",       "turn:bn-turn1.xirsys.com:3478?transport=tcp",       "turns:bn-turn1.xirsys.com:443?transport=tcp",       "turns:bn-turn1.xirsys.com:5349?transport=tcp"   ]}]
 
 const localVideo = document.getElementById('localVideo');
 const remoteVideo = document.getElementById('remoteVideo');
